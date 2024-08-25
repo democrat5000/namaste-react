@@ -1,0 +1,23 @@
+body {
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+ 
+  }
+
+#grandparent{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+  width: 90%;
+  margin: auto;
+}
+
+#sibling1,
+#sibling2{
+  border: 1px solid #000;
+  margin: 20px;
+  padding: 20px;
+  height: 50%;
+}
