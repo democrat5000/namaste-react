@@ -7,7 +7,8 @@ body {
 /* ============HEADER================== */
 .header {
   display: flex;
- align-items: center;
+  align-items: center;
+  justify-content: space-between;
   height: 4rem;
   width: 100%;
   position: fixed;
@@ -26,7 +27,7 @@ body {
 .logo {
   height: 90%;
   width: 6rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-top: .2rem;
   background-size: contain;
   background-repeat: no-repeat;
@@ -34,8 +35,9 @@ body {
 
 /* ================NAV=============== */
 .navItems {
-  width: 35%;
+  width: 50%;
   height: 100%;
+  margin-right: 1rem;
 }
 
 .navItems > ul {
@@ -47,11 +49,12 @@ body {
 
 .navItems > ul > li {
   font-weight: 800;
-  margin: 5px 30px;
+  margin: .5rem 1rem;
+  margin-left: 1rem;
 }
 
 .cart{
-  margin-right: 2rem;
+  margin-right: 1rem;
   width: 2rem;
 }
 
@@ -100,24 +103,34 @@ object-fit: cover;
 }
 
 /* =============SEARCH============ */
- .searchContainer {
+.masterContainer {
+  display: flex;  
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+} 
+
+.searchContainer {
     display: flex;
-    width: 60%;
-    align-items: center;
+    width: 50%;
+    align-items:center;
+    justify-content:flex-start;
     background-color: white;
-    height: 2rem;
-    /* margin-left: 1rem; */
+    height: 4rem;
   }
 
+  .filterContainer {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+  }
   .searchBox {
     border: 1px solid black;
     width: 20rem;
     height: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 3rem;
-    /* margin-right: 1rem; */
     box-shadow: .25rem .25rem rgb(247, 202, 186);
+    margin-top: .25rem;
   }
 
   .searchBox:hover{
@@ -128,20 +141,36 @@ object-fit: cover;
     border: 1px solid #000;
     width: 4rem;
     height: 2rem;
-    text-align: center;
-    margin: 2rem;
     margin-left: 1rem;
-    margin-right: 0;
-    /* margin-right: 0; */
+    margin-top: .25rem;
+    text-align: center;
     border-radius: .5rem;
     font-weight: 700;
-    background-color: #ff5505;
+    background-color: #ff5101;
   }
 
   .searchButton:hover {
     cursor: pointer;
+    background-color: #f86e2e;
   }
 
+  .filter-btn {
+    border: 1px solid #000;
+    width: 11rem;
+    height: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    background-color: #ff5101;
+    padding: .31rem;
+  }
+
+  .filter-btn:hover {
+      cursor: pointer;
+      background-color: #f86e2e;
+    }
+  
   /* ==============RES CONTAINER============ */
 .resContainer {
 display: flex;
@@ -211,4 +240,5 @@ object-fit: cover;
   font-weight: bold;
   text-align: left;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }

@@ -6,7 +6,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Footer from "/src/components/Footer";
 import Body from "/src/components/Body";
-import Search from "./components/Search";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Image from "./components/Image";

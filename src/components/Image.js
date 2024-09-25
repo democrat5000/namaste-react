@@ -976,19 +976,19 @@ const imgArray = [
       }
   ]
 
-  const Image = ()=> {
-    return (
-      <div className="imgContainer">
-      { imgArray.map((x) => (
-        <img 
-        key={ x.id }
-        src={x.urls.small_s3}>
-        </img>
-      ))}
+//   const Image = ()=> {
+//     return (
+//       <div className="imgContainer">
+//       { imgArray.map((x) => (
+//         <img 
+//         key={ x.id }
+//         src={x.urls.small_s3}>
+//         </img>
+//       ))}
      
-      </div>
-    );
-  }
+//       </div>
+//     );
+//   }
   
 
   export default Image;

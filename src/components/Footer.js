@@ -8,7 +8,7 @@ const Footer = ()=> {
   return(
         <div className="footerContainer" 
           style={{display: "flex", 
-          justifyContent: "space-around", 
+          justifyContent: "space-between", 
           width:"100%", 
           background: "#EEEEEE"}}>
           <Copyright/>

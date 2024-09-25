@@ -1,4 +1,9 @@
-
+import {LINKEDIN_URL} from "../../src/utils/constants";
+import {LINKEDIN_SRC_URL} from "../../src/utils/constants";
+import {FACEBOOK_URL} from "../../src/utils/constants";
+import {FACEBOOK_SRC_URL} from "../../src/utils/constants";
+import {TWITTER_URL} from "../../src/utils/constants";
+import {TWITTER_SRC_URL} from "../../src/utils/constants";
 
 const SocialLinks = ()=> {
   return(
@@ -6,26 +11,27 @@ const SocialLinks = ()=> {
           style={{
           display: "flex",
           flexDirection: "column",
-          cursor: "pointer"}}>
+          cursor: "pointer",
+          marginRight: "2rem"}}>
       <h6>Social Links</h6>
       <div className="links"
             style={{
             display: "flex",
             justifyContent: "space-around"}}>
-      <a href="https://in.linkedin.com/company/swiggy-in" target="_blank"><img src="https://cdn-icons-png.freepik.com/256/3536/3536569.png?ga=GA1.1.129955454.1725203153&semt=ais_hybrid" 
-      className="linkedin"
-      style={{
+        <a href={LINKEDIN_URL} target="_blank"><img src={LINKEDIN_SRC_URL}
+        className="linkedin"
+        style={{
         width: "1rem",
         height: "1rem"}}
-      ></img></a>
-      <a href="https://www.facebook.com/swiggy.in" target="_blank"><img src="https://cdn-icons-png.freepik.com/256/2504/2504903.png?ga=GA1.1.129955454.1725203153&semt=ais_hybrid" 
-      className="facebook"
-      style={{
+        ></img></a>
+        <a href={FACEBOOK_URL}><img src={FACEBOOK_SRC_URL} 
+        className="facebook"
+        style={{
         width: "1rem",
         height: "1rem"}}></img></a>
-      <a href="https://x.com/swiggy_in" target="_blank"><img src="https://cdn-icons-png.freepik.com/256/14417/14417709.png?ga=GA1.1.129955454.1725203153&semt=ais_hybrid" 
-      className="twitter"
-      style={{
+        <a href={TWITTER_URL} target="_blank"><img src={TWITTER_SRC_URL} 
+        className="twitter"
+        style={{
         width: "1rem",
         height: "1rem"}}></img></a>
       </div>
