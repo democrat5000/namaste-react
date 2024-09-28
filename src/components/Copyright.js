@@ -1,3 +1,4 @@
+import React from 'react';
 import {LOGO_SRC_URL} from "../../src/utils/constants";
 
 const Copyright = ()=>{

@@ -1,3 +1,4 @@
+import React from 'react';
 import Company from "./Company";
 import Copyright from "./Copyright";
 import Legal from "./Legal";
@@ -10,7 +11,9 @@ const Footer = ()=> {
           style={{display: "flex", 
           justifyContent: "space-between", 
           width:"100%", 
-          background: "#EEEEEE"}}>
+          background: "#EEEEEE",
+          padding: ".5rem"
+          }}>
           <Copyright/>
           <Company/>
           <Legal/>

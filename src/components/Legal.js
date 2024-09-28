@@ -1,3 +1,4 @@
+import React from 'react';
 import {TERMS_CONDITIONS_URL} from "../../src/utils/constants";
 import {COOKIE_POLICY_URL} from "../../src/utils/constants";
 import {PRIVACY_POLICY_URL} from "../../src/utils/constants";

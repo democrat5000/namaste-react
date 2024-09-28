@@ -1,3 +1,4 @@
+import React from 'react';
 import {LINKEDIN_URL} from "../../src/utils/constants";
 import {LINKEDIN_SRC_URL} from "../../src/utils/constants";
 import {FACEBOOK_URL} from "../../src/utils/constants";

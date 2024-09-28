@@ -1,3 +1,4 @@
+import React from 'react';
 import {EXPLORE_URL} from "../../src/utils/constants";
 import {SUPPORT_URL} from "../../src/utils/constants";
 import {PARTNER_URL} from "../../src/utils/constants";

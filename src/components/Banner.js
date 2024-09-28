@@ -1,3 +1,4 @@
+import React from 'react';
 import {BANNER_URL} from "../../src/utils/constants";
 
 const Banner = ()=> {

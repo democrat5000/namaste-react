@@ -1,3 +1,4 @@
+import React from 'react';
 import {ABOUT_URL} from "../../src/utils/constants";
 import {VISION_URL} from "../../src/utils/constants";
 import {CAREERS_URL} from "../../src/utils/constants";

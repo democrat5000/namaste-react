@@ -1,7 +1,8 @@
-
+import React from 'react';
 import RestaurantCard from "./RestaurantCard";
-import Search from "./Search";
+import Shimmer from "./Shimmer";
 import {useState, useEffect} from "react";
+
 
 let resListPicsDummy = 
                 [
@@ -2103,7 +2104,6 @@ let resListPicsDummy =
                   }
                 ]
 
-
 let resListNoPicsLive = 
 [
          {
@@ -4183,10 +4183,13 @@ let resListNoPicsLive =
          }
        ];
 
-
-
 const Body = ()=> {
 const [listOfRestaurants, setListOfRestaurants] = useState([]); //initial state is set to [] or [resListPicsDummy] data
+
+const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+// the INPUT for filtering is listOfRestaurants. The OUTPUT and the RENDER of RestaurantCard uses filteredRestaurants
+
+const [searchText, setSearchText] = useState("");
 
 useEffect(()=>{
   fetchData();
@@ -4194,15 +4197,18 @@ useEffect(()=>{
 
 const fetchData = async ()=> {
   const data = await fetch
-  ("https://namaste-dishes.vercel.app/mockdata.json ");
+  ("https://corsproxy.io/?https://namaste-dishes.vercel.app/mockdata.json");  
 
   const json = await data.json();
   console.log(json);
   //get path from JSON PathFinder website. delete all above & below restaurants object to create array list of restaurant.
   setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants); // new state is now live data, overrides [] or [resListPicsDummy]
+  setFilteredRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  //need 2 states of data once we introduce filtering
 }
 
-  return (
+  return listOfRestaurants.length === 0 ? 
+    ( <Shimmer/>):(
     <div className="body">
       <div className="masterContainer">
         <div className="filterContainer">
@@ -4210,23 +4216,39 @@ const fetchData = async ()=> {
             <button className="filter-btn" onClick={()=> { 
             const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5
             );
-            setListOfRestaurants(filteredList);
+            setFilteredRestaurants(filteredList);
             }}
             >Top Rated Restaurants
             </button>
           </div>
         </div>
-        <div className="searchContainer">
-          <Search/>
+        <div className="search-container">
+          <input  type="text" 
+                  className="search-box" 
+                  placeholder="  Search for restaurants..."
+                  value={searchText}
+                  onChange={(e)=>{
+                  setSearchText(e.target.value);
+                  }}/>
+          <button 
+                  className="searchButton"              
+                  onClick={()=>{
+                  const filteredRestaurants = listOfRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                  setFilteredRestaurants(filteredRestaurants);
+                  }}
+                  >
+                  Search</button>
         </div>
       </div>
+
       <div className="resContainer">
-        { listOfRestaurants.map((restaurant) => (
+        { filteredRestaurants.map((restaurant) => (
           <RestaurantCard key={ restaurant.info.id } resData = {restaurant} />
         ))}
       </div>
     </div>
   );
 }
+
 
 export default Body;

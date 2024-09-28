@@ -1,5 +1,6 @@
 // ===========HEADER - NAV ITEMS==============
 export const HOME_URL = "https://careers.swiggy.com/#/about";
+export const ABOUT_URL = "https://www.swiggy.com/about-us/";
 export const CONTACT_URL = "https://www.swiggy.com/corporate/contact-us/";
 export const CART_SRC_URL = "https://cdn-icons-png.freepik.com/256/5733/5733218.png?ga=GA1.1.129955454.1725203153&semt=ais_hybrid"; 
 
@@ -10,7 +11,6 @@ export const BANNER_URL = "https://media-assets.swiggy.com/swiggy/image/upload/f
 // =============FOOTER-CORPORATE==================
 
 export const VISION_URL = "https://careers.swiggy.com/#/about";
-export const ABOUT_URL = "https://www.swiggy.com/about-us/";
 export const VALUES_URL = "https://careers.swiggy.com/#/values_at_swiggy";
 export const CAREERS_URL = "https://careers.swiggy.com/#/";
 export const LIFE_URL = "https://careers.swiggy.com/#/swiggy_life";
