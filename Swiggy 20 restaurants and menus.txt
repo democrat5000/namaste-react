@@ -1,0 +1,75 @@
+list of 20 Swiggy restaurants (from Discord Community)
+https://namaste-dishes.vercel.app/mockdata.json
+
+
+https://www.swiggy.com/dapi/restaurants/pl?page-type=DESKTOP_WEB_LISTING/lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING
+
+
+
+lists of dummy menus (complete) from Swiggy downloads
+
+hotel empire
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=424558&catalog_qa=undefined&submitAction=ENTER
+
+new shree
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=85205&catalog_qa=undefined&submitAction=ENTER
+
+jay jalaram
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=205488&catalog_qa=undefined&submitAction=ENTER
+
+dastarkhwan
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=225325&catalog_qa=undefined&submitAction=ENTER
+
+mahalaxmi
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=456090&catalog_qa=undefined&submitAction=ENTER
+
+dominos
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=841660&catalog_qa=undefined&submitAction=ENTER
+
+mp paratha
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=138863&catalog_qa=undefined&submitAction=ENTER
+
+glorious
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=71471&catalog_qa=undefined&submitAction=ENTER
+
+subway
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=65028&catalog_qa=undefined&submitAction=ENTER
+
+mcdonalds
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=100721&catalog_qa=undefined&submitAction=ENTER
+
+pizza hut
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=72605&catalog_qa=undefined&submitAction=ENTER
+
+maakhan
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=120319&catalog_qa=undefined&submitAction=ENTER
+
+alpha
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=65694&catalog_qa=undefined&submitAction=ENTER
+
+radha
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=124605&catalog_qa=undefined&submitAction=ENTER
+
+bhai bhai
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=77535&catalog_qa=undefined&submitAction=ENTER
+
+center point
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=352546&catalog_qa=undefined&submitAction=ENTER
+
+shree sai
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=79606&catalog_qa=undefined&submitAction=ENTER
+
+kolkata rolls
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=186141&catalog_qa=undefined&submitAction=ENTER
+
+burger king
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=&catalog_qa=undefined&submitAction=ENTER
+
+olio
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=675027&catalog_qa=undefined&submitAction=ENTER
+
+=================================
+hotel empire
+https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=425&catalog_qa=undefined&submitAction=ENTER
+
+

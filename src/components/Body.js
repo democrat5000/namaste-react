@@ -4197,7 +4197,7 @@ useEffect(()=>{
 
 const fetchData = async ()=> {
   const data = await fetch
-  ("https://corsproxy.io/?https://namaste-dishes.vercel.app/mockdata.json");  
+  ("https://namaste-dishes.vercel.app/mockdata.json");  
 
   const json = await data.json();
   console.log(json);
@@ -4208,7 +4208,7 @@ const fetchData = async ()=> {
 }
 
   return listOfRestaurants.length === 0 ? 
-    ( <Shimmer/>):(
+    <Shimmer/> :(
     <div className="body">
       <div className="masterContainer">
         <div className="filterContainer">

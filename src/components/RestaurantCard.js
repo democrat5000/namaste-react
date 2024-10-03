@@ -17,9 +17,12 @@ const {slaString} = resData?.info?.sla;
     <h6>{costForTwo}</h6>
     <h6>{slaString}</h6>
 
+
   </div>
+  
   );
 }
+
 
 export default RestaurantCard;
 
