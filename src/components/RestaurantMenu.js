@@ -38808,7 +38808,7 @@ let {text} = resInfo?.data?.cards[0]?.card?.card;
       <div className="menu-items">
             <ul>
               {itemCards.map(item => 
-              <li>
+              <li key={item.card.info.id}>
               {item.card.info.name}
               {" - Rs. "}
               {item.card.info.price / 100}
