@@ -327,12 +327,17 @@ object-fit: cover;
   justify-content: space-between;
   width: 85%;
   margin-left: 13rem;
+  margin-bottom: 1rem;
+}
+
+.menu-items > ul > li:hover{
+  cursor: pointer;
+  background-color: #f5834e;
+  font-weight: bold;
 }
 
 .menu-items > ul > li > img {
-  height: 3rem;
-  width: 4rem;
+  height: 4rem;
+  width: 6rem;
   float: right;
-  margin-bottom: 1rem;
-  
 }

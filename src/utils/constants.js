@@ -46,3 +46,6 @@ export const TWITTER_SRC_URL = "https://cdn-icons-png.freepik.com/256/14417/1441
 // ===========HEADER-COPYRIGHT-LOGO==============
 export const LOGO_SRC_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_260/portal/m/seo/Logos/Swiggy/Swiggy%20logo-2.png";
 
+// ===========MENU API==============
+
+export const MENU_API = "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId="
