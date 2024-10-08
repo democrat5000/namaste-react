@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import Shimmer from "./Shimmer";
-import { DiTravis } from 'react-icons/di';
+
 
 
 // const resMenu = 
@@ -38792,78 +38792,35 @@ const RestaurantMenu = () => {
 
 if(resInfo === null) return <Shimmer/>;
 
-let {name} = resInfo?.data?.cards[2]?.card?.card?.info;
+const {itemCards} = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+console.log(itemCards);
+
 
 let {text} = resInfo?.data?.cards[0]?.card?.card;
 
-
-
-// const {name} = resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards[0]?.card?.info?.name;
-
   return (
-    <div className="titles">
-      <h1>{text}</h1>
-      <h2>Menu</h2>
     <div>
-    
-    
-    <div className="menu-container">
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[0]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[0].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596450514735-111a2fe02935"></img>
+      <div className="menu-titles">
+          <h1>{text}</h1>
+          <h2>Menu</h2>
       </div>
 
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[1]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[1].card.info.price /100}</h5>
+      <div className="menu-items">
+            <ul>
+              {itemCards.map(item => 
+              <li>
+              {item.card.info.name}
+              {" - Rs. "}
+              {item.card.info.price / 100}
+              {<img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1523049673857-eb18f1d7b578"></img>}
+              </li>
+              )}
+            </ul>
       </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596450514659-4ff64fdde903"></img>
-      </div>
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[2]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[2].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1523049673857-eb18f1d7b578"></img>
-      </div>
-
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[3]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[3].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1470549813517-2fa741d25c92"></img>
-      </div>
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[4]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[4].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596450514735-111a2fe02935"></img>
-      </div>
-
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[5]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[5].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596450514735-111a2fe02935"></img>
-      </div>
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[6]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[6].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596450514735-111a2fe02935"></img>
-      </div>
-
-      <div className="items-container">
-        <h5>{resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards[7]?.card?.info?.name} - {resInfo.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards[7].card.info.price /100}</h5>
-      </div>  
-      <div className="menu-image">
-        <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1596450514735-111a2fe02935"></img>
-      </div>
-      </div>
-      </div> 
     </div>
   );
 }
+
+
 
 export default RestaurantMenu;
