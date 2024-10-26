@@ -2,39 +2,68 @@
 
 /* Remove all the styles of the "User-Agent-StyleSheet", except for the 'display' property */
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
-  all: unset;
-  display: revert;
+	all: unset;
+	display: revert;
 }
 
 /* calculate default font size at 10px*/
 :root {
-  font-size: calc( (1.0rem/1.6) + 1vmin);
-  }
+	/* font-size: calc( (1.0rem/1.6) + 1vmin); */
+	font-size: 16px;
+}
 
 /* re-state flexible H1 - H6 font sizes in rem */
-h1 {font-size: 3.6rem;}
-h2 {font-size: 2.4rem;}
-h3 {font-size: 2.1rem;}
-h4 {font-size: 1.8rem;}
-h5 {font-size: 1.6rem;}
-h6 {font-size: 1.4rem;}
+h1 {
+	font-size: 3.6rem;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 2.1rem;
+}
+h4 {
+	font-size: 1.8rem;
+}
+h5 {
+	font-size: 1.6rem;
+}
+h6 {
+	font-size: 1.4rem;
+}
 
 /* remove margin-top */
-h1, h2, h3, h4, h5, h6, p {margin-top: 0;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
 
-body{
-  font-family: garamond, arial;
-  background: #f8f9fb;
-  line-height: 1.2;
+body {
+	font-family: garamond, arial;
+	background: #f8f9fb;
+	line-height: 1.2;
 }
 
 /* Preferred box-sizing value */
 *,
 *::before,
-*::after {box-sizing: border-box;}
+*::after {
+	box-sizing: border-box;
+}
 
-html, body, ul, ol, li, 
-form, fieldset, legend {
+html,
+body,
+ul,
+ol,
+li,
+form,
+fieldset,
+legend {
 	margin: 0;
 	padding: 0;
 }
@@ -42,31 +71,41 @@ form, fieldset, legend {
 /*
   Remove list styles (bullets/numbers)
   in case you use it with normalize.css */
-ol, ul, li {list-style: none;}
+ol,
+ul,
+li {
+	list-style: none;
+}
 
-a {text-decoration: none;}
+a {
+	text-decoration: none;
+}
 
 /* For images to not be able to exceed their container */
 img {
-  max-width: 100%;
-  border: 0;
+	max-width: 100%;
+	border: 0;
 }
 
-fieldset { 
-  border: 0; 
+fieldset {
+	border: 0;
 }
 
 /* Removes spacing between cells in tables */
-table {border-collapse: collapse;}
+table {
+	border-collapse: collapse;
+}
 
 /* Revert the 'white-space' property for textarea elements on Safari */
-textarea {white-space: revert;}
+textarea {
+	white-space: revert;
+}
 
-.wrapper{
-  width: 100vw;
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
+.wrapper {
+	width: 100vw;
+	max-width: 1200px;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
 }

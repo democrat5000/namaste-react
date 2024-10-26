@@ -10,7 +10,7 @@ const {slaString} = resData?.info?.sla;
 
   return(
   <div className="resCard" style={{backgroundColor: "#f0f0f0"}}>
-    <img src={small_s3}></img>
+    {<img src= "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1432139555190-58524dae6a55"></img>}
     <h5>{name}</h5>
     <h6>{cuisines.join(", ")}</h6>
     <h6>{avgRating} /5 stars</h6>

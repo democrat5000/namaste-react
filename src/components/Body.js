@@ -2111,7 +2111,7 @@ let resListNoPicsLive =
            "info": {
              "id": "74644",
              "name": "Burger King",
-             "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/55d0daa1-ad2e-4893-be06-4709c5c68d49_74644.JPG",
+             "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1568901346375-23c9450c58cd",
              "locality": "Vesu",
              "areaName": "Vesu",
              "costForTwo": "₹350 for two",
