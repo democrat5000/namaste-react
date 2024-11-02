@@ -14,61 +14,53 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 
-
-
-
 const e = React.createElement;
 const r = ReactDOM.createRoot(document.getElementById("root"));
 
-
-
-const AppLayout = ()=> {  
-  return (
-    
-    <div className="appLayout">
-      <Header/>
-      <Banner/>
-      <Outlet/>
-      <Footer/>
-    </div>
-   
-  );
-}
+const AppLayout = () => {
+	return (
+		<div className='appLayout'>
+			<Header />
+			<Banner />
+			<Outlet />
+			<Footer />
+		</div>
+	);
+};
 
 // 1st we create routing configuration. 2nd we pass it root.Render()
 const appRouter = createBrowserRouter([
-  {path: "/",
-    element: <AppLayout/>,
-    children: [
-      {
-        path: "/",
-        element: <Body/>,
-        errorElement: <Error/>
-      },
-      {
-        path: "/about",
-        element: <About/>,
-        errorElement: <Error/>
-      },
-      {
-        path: "/contact",
-        element: <Contact/>,
-        errorElement: <Error/>
-      },
-      {
-        path: "/restaurants/:resId",
-        element: <RestaurantMenu />,
-      },
-    ],
-    errorElement: <Error/>,
-  },
+	{
+		path: "/",
+		element: <AppLayout />,
+		children: [
+			{
+				path: "/",
+				element: <Body />,
+				errorElement: <Error />,
+			},
+			{
+				path: "/about",
+				element: <About />,
+				errorElement: <Error />,
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
+				errorElement: <Error />,
+			},
+			{
+				path: "/restaurants/:resId",
+				element: <RestaurantMenu />,
+			},
+		],
+		errorElement: <Error />,
+	},
 ]);
 
 const root = r;
 // direct approach
-// root.render(<AppLayout/>); 
+// root.render(<AppLayout/>);
 
 // using RouterProvider approach. written by ReactRouter company. they also created the component <RouterProvider/>
-root.render(<RouterProvider router={appRouter}/>);
-
-
+root.render(<RouterProvider router={appRouter} />);

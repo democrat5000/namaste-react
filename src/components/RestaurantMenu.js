@@ -38778,21 +38778,22 @@ import {MENU_API} from "../utils/constants";
 // }
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
+  // const [resInfo, setResInfo] = useState(null);
   
   const {resId} = useParams();
   
+  const resInfo = useRestaurantMenu(resId);
 
-  useEffect(()=>{
-    fetchMenu();
-  },[]); 
+  // useEffect(()=>{
+  //   fetchMenu();
+  // },[]); 
 
-  const fetchMenu = async ()=> {
-    const data = await fetch(MENU_API+resId);
-    const json = await data.json();
-    console.log(json);
-    setResInfo(json);
-};
+//   const fetchMenu = async ()=> {
+//     const data = await fetch(MENU_API+resId);
+//     const json = await data.json();
+//     console.log(json);
+//     setResInfo(json);
+// };
 
 if(resInfo === null) return <Shimmer/>;
 
