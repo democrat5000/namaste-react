@@ -8,6 +8,8 @@ const RestaurantCard = (props)=> {
 
 const {slaString} = resData?.info?.sla;
 
+
+
   return(
   <div className="resCard" style={{backgroundColor: "#f0f0f0"}}>
     {<img src= "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1432139555190-58524dae6a55"></img>}
@@ -23,6 +25,19 @@ const {slaString} = resData?.info?.sla;
   );
 }
 
+//higher order component
+//input restaurant card => RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard)=> {
+  return(props)=> {
+    return(
+    <div>
+      <label className="label">Promoted</label>
+      <RestaurantCard {...props}/>
+    </div>
+    )
+  }
+}
 
 export default RestaurantCard;
 

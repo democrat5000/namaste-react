@@ -1,8 +1,10 @@
 import React from 'react';
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 
 
 let resListPicsDummy = 
@@ -4185,12 +4187,16 @@ let resListNoPicsLive =
        ];
 
 const Body = ()=> {
-const [listOfRestaurants, setListOfRestaurants] = useState([]); //initial state is set to [] or [resListPicsDummy] data
+  const [listOfRestaurants, setListOfRestaurants] = useState([]); //initial state is set to [] or [resListPicsDummy] data
 
-const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-// the INPUT for filtering is listOfRestaurants. The OUTPUT and the RENDER of RestaurantCard uses filteredRestaurants
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  // the INPUT for filtering is listOfRestaurants. The OUTPUT and the RENDER of RestaurantCard uses INPUT filteredRestaurants
+  
+  const [searchText, setSearchText] = useState("");
 
-const [searchText, setSearchText] = useState("");
+const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
+console.log(listOfRestaurants);
 
 useEffect(()=>{
   fetchData();
@@ -4208,13 +4214,20 @@ const fetchData = async ()=> {
   //need 2 states of data once we introduce filtering
 }
 
+const onlineStatus = useOnlineStatus();
+if(onlineStatus === false) 
+  return (
+  <h1>Looks like you're offline!! Please check your internet connection.
+  </h1>);
+  
+  
   return listOfRestaurants.length === 0 ? 
     <Shimmer/> :(
-    <div className="body">
+    <div className="body home">
       <div className="masterContainer">
         <div className="filterContainer">
           <div className="filter">
-            <button className="filter-btn" onClick={()=> { 
+          <button className="filter-btn" onClick={()=> { 
             const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5
             );
             setFilteredRestaurants(filteredList);
@@ -4224,27 +4237,29 @@ const fetchData = async ()=> {
           </div>
         </div>
         <div className="search-container">
-          <input  type="text" 
-                  className="search-box" 
-                  placeholder="  Search for restaurants..."
-                  value={searchText}
-                  onChange={(e)=>{
-                  setSearchText(e.target.value);
-                  }}/>
+        <input  type="text" 
+          className="search-box" 
+          placeholder="  Search for restaurants..."
+          value={searchText}
+          onChange={(e)=>{
+          setSearchText(e.target.value);
+          }}/>
           <button 
-                  className="searchButton"              
-                  onClick={()=>{
-                  const filteredRestaurants = listOfRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                  setFilteredRestaurants(filteredRestaurants);
-                  }}
-                  >
-                  Search</button>
+          className="searchButton"              
+          onClick={()=>{
+          const filteredRestaurants = listOfRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+          setFilteredRestaurants(filteredRestaurants);
+          }}
+          >
+          Search</button>
         </div>
-      </div>
-
+      </div>``
       <div className="resContainer">
         { filteredRestaurants.map((restaurant) => (
-          <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}><RestaurantCard resData = {restaurant} /></Link>
+          <Link to={"/restaurants/"+restaurant.info.id} key={restaurant.info.id}>
+          
+          {restaurant.info.veg ? (<RestaurantCardPromoted resData = {restaurant}/>) :
+          (<RestaurantCard resData = {restaurant} />)}</Link>
         ))}
       </div>
     </div>

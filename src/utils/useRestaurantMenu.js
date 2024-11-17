@@ -1,4 +1,5 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import {MENU_API} from "../utils/constants";
 
 const useRestaurantMenu = (resId)=> {
 
@@ -12,10 +13,10 @@ const useRestaurantMenu = (resId)=> {
     const data = await fetch(MENU_API+resId);
     const json = await data.json();
     console.log(json);
-    setResInfo(json.data);
+    setResInfo(json);
+    // akshay uses setResInfo(json.data);
   }
-  
-  
+
   return resInfo;
 
 }
